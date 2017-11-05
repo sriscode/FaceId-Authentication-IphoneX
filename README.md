@@ -5,6 +5,7 @@ The code demonstrates how to integrate Face Id authentication integration into t
 This Code also works for touchId authentication.
 
 Detailed explanation of the code will be added soon in https://www.machinethinks.com
+Output response is available https://www.youtube.com/embed/cVszLYc85Bo
 
 Class MTBiometricAuthentication in this project is responsible for biometeric authentication and notify the success / fail status with 
 Post Notification
