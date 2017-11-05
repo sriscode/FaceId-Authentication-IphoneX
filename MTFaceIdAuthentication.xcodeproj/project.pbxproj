@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		1028A7EC1FAED31F009CF5C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1028A7EB1FAED31F009CF5C9 /* AppDelegate.swift */; };
-		1028A7EE1FAED31F009CF5C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1028A7ED1FAED31F009CF5C9 /* ViewController.swift */; };
 		1028A7F11FAED31F009CF5C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1028A7EF1FAED31F009CF5C9 /* Main.storyboard */; };
 		1028A7F31FAED31F009CF5C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1028A7F21FAED31F009CF5C9 /* Assets.xcassets */; };
 		1028A7F61FAED31F009CF5C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1028A7F41FAED31F009CF5C9 /* LaunchScreen.storyboard */; };
+		1028A8001FAED399009CF5C9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1028A7FD1FAED399009CF5C9 /* LoginVC.swift */; };
+		1028A8011FAED399009CF5C9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1028A7FE1FAED399009CF5C9 /* HomeVC.swift */; };
+		1028A8021FAED399009CF5C9 /* MTBiometricAuthenication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1028A7FF1FAED399009CF5C9 /* MTBiometricAuthenication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1028A7E81FAED31F009CF5C9 /* MTFaceIdAuthentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTFaceIdAuthentication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1028A7EB1FAED31F009CF5C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1028A7ED1FAED31F009CF5C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1028A7F01FAED31F009CF5C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1028A7F21FAED31F009CF5C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1028A7F51FAED31F009CF5C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1028A7F71FAED31F009CF5C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1028A7FD1FAED399009CF5C9 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		1028A7FE1FAED399009CF5C9 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		1028A7FF1FAED399009CF5C9 /* MTBiometricAuthenication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTBiometricAuthenication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				1028A7EB1FAED31F009CF5C9 /* AppDelegate.swift */,
-				1028A7ED1FAED31F009CF5C9 /* ViewController.swift */,
+				1028A7FD1FAED399009CF5C9 /* LoginVC.swift */,
+				1028A7FF1FAED399009CF5C9 /* MTBiometricAuthenication.swift */,
+				1028A7FE1FAED399009CF5C9 /* HomeVC.swift */,
 				1028A7EF1FAED31F009CF5C9 /* Main.storyboard */,
 				1028A7F21FAED31F009CF5C9 /* Assets.xcassets */,
 				1028A7F41FAED31F009CF5C9 /* LaunchScreen.storyboard */,
@@ -136,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1028A7EE1FAED31F009CF5C9 /* ViewController.swift in Sources */,
+				1028A8021FAED399009CF5C9 /* MTBiometricAuthenication.swift in Sources */,
+				1028A8011FAED399009CF5C9 /* HomeVC.swift in Sources */,
+				1028A8001FAED399009CF5C9 /* LoginVC.swift in Sources */,
 				1028A7EC1FAED31F009CF5C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +283,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MTFaceIdAuthentication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sris.MTFaceIdAuthentication;
@@ -289,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MTFaceIdAuthentication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sris.MTFaceIdAuthentication;
