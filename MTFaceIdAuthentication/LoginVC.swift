@@ -17,8 +17,13 @@ class LoginVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(LoginVC.authenticationCompletionHandler(loginStatusNotification:)), name: .MTBiometricAuthenicationNotificationLoginStatus, object: nil)
     }
     
+    
     override func viewDidDisappear(_ animated: Bool) {
         self.view.endEditing(true)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     @IBAction func loginSubmitted(_ sender: Any) {
@@ -73,7 +78,7 @@ class LoginVC: UIViewController {
     func authenticateWithBiometric() {
         let bioAuth = MTBiometricAuthenication()
         bioAuth.reasonString = "To login into the app"
-        bioAuth.authenticationWithTouchID()
+        bioAuth.authenticationWithBiometricID()
     }
 
 }

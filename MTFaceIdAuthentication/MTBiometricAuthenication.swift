@@ -36,7 +36,7 @@ class MTBiometricAuthenication {
     var reasonString = "For bio auth"
     static let status = "status"
     
-    func authenticationWithTouchID() {
+    func authenticationWithBiometricID() {
         let localAuthenticationContext = LAContext()
         localAuthenticationContext.localizedFallbackTitle = "Use Passcode"
         
