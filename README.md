@@ -19,7 +19,7 @@ How to use MTBiometricAuthenication class.
     name: .MTBiometricAuthenicationNotificationLoginStatus, object: nil)
   
 4) Implement the authenticationCompletionHandler as below.
-
+<code>
  @objc func authenticationCompletionHandler(loginStatusNotification: Notification) {
         if let _ = loginStatusNotification.object as? MTBiometricAuthenication, let userInfo = loginStatusNotification.userInfo {
             if let authStatus = userInfo[MTBiometricAuthenication.status] as? MTBiomericAuthenticationStatus {
@@ -40,7 +40,7 @@ How to use MTBiometricAuthenication class.
             }
         }
     }
-    
+    </code>
     
     Output Screenshot from this project:
     
