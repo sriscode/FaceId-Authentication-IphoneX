@@ -13,7 +13,7 @@
 		1028A7F61FAED31F009CF5C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1028A7F41FAED31F009CF5C9 /* LaunchScreen.storyboard */; };
 		1028A8001FAED399009CF5C9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1028A7FD1FAED399009CF5C9 /* LoginVC.swift */; };
 		1028A8011FAED399009CF5C9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1028A7FE1FAED399009CF5C9 /* HomeVC.swift */; };
-		1028A8021FAED399009CF5C9 /* MTBiometricAuthenication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1028A7FF1FAED399009CF5C9 /* MTBiometricAuthenication.swift */; };
+		1028A8021FAED399009CF5C9 /* MTBiometricAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1028A7FF1FAED399009CF5C9 /* MTBiometricAuthentication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		1028A7F71FAED31F009CF5C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1028A7FD1FAED399009CF5C9 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		1028A7FE1FAED399009CF5C9 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		1028A7FF1FAED399009CF5C9 /* MTBiometricAuthenication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTBiometricAuthenication.swift; sourceTree = "<group>"; };
+		1028A7FF1FAED399009CF5C9 /* MTBiometricAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTBiometricAuthentication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			children = (
 				1028A7EB1FAED31F009CF5C9 /* AppDelegate.swift */,
 				1028A7FD1FAED399009CF5C9 /* LoginVC.swift */,
-				1028A7FF1FAED399009CF5C9 /* MTBiometricAuthenication.swift */,
+				1028A7FF1FAED399009CF5C9 /* MTBiometricAuthentication.swift */,
 				1028A7FE1FAED399009CF5C9 /* HomeVC.swift */,
 				1028A7EF1FAED31F009CF5C9 /* Main.storyboard */,
 				1028A7F21FAED31F009CF5C9 /* Assets.xcassets */,
@@ -142,7 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1028A8021FAED399009CF5C9 /* MTBiometricAuthenication.swift in Sources */,
+				1028A8021FAED399009CF5C9 /* MTBiometricAuthentication.swift in Sources */,
 				1028A8011FAED399009CF5C9 /* HomeVC.swift in Sources */,
 				1028A8001FAED399009CF5C9 /* LoginVC.swift in Sources */,
 				1028A7EC1FAED31F009CF5C9 /* AppDelegate.swift in Sources */,

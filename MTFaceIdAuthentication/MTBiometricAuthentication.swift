@@ -1,5 +1,5 @@
 //
-//  MTBiometricAuthenication.swift
+//  MTBiometricAuthentication.swift
 //  MTFaceIdAuthentication
 //
 //  Created by SA on 11/4/17.
@@ -10,7 +10,7 @@ import Foundation
 import LocalAuthentication
 
 extension Notification.Name {
-    static let MTBiometricAuthenicationNotificationLoginStatus = Notification.Name("LoginStatus")
+    static let MTBiometricAuthenticationNotificationLoginStatus = Notification.Name("LoginStatus")
 }
 
 struct MTBiomericAuthenticationStatus {
@@ -29,7 +29,7 @@ struct MTBiomericAuthenticationStatus {
     }
 }
 
-class MTBiometricAuthenication {
+class MTBiometricAuthentication {
     
     var authStatus =  MTBiomericAuthenticationStatus()
     //reasonString is prompted to user for login with touchid
@@ -48,7 +48,7 @@ class MTBiometricAuthenication {
                 
                 if success {
                     self.authStatus.setLoginSuccess()
-                    self.postNotification(userInfo: [MTBiometricAuthenication.status : self.authStatus])
+                    self.postNotification(userInfo: [MTBiometricAuthentication.status : self.authStatus])
                     
                 } else {
                     guard let error = error else {
@@ -56,7 +56,7 @@ class MTBiometricAuthenication {
                     }
                     let errorMessage = self.errorMessageForFails(errorCode: error._code)
                     self.authStatus.setLoginFail(errorCode: error._code, errorMessage: errorMessage)
-                    self.postNotification(userInfo: [MTBiometricAuthenication.status : self.authStatus])
+                    self.postNotification(userInfo: [MTBiometricAuthentication.status : self.authStatus])
                 }
             }
         } else {
@@ -66,7 +66,7 @@ class MTBiometricAuthenication {
             }
             let errorMessage = self.errorMessageForFails(errorCode: error._code)
             self.authStatus.setLoginFail(errorCode: error._code, errorMessage: errorMessage)
-            self.postNotification(userInfo: [MTBiometricAuthenication.status : self.authStatus])
+            self.postNotification(userInfo: [MTBiometricAuthentication.status : self.authStatus])
         }
     }
     
@@ -139,7 +139,7 @@ class MTBiometricAuthenication {
     }
    
     func postNotification(userInfo: [String: MTBiomericAuthenticationStatus]) {
-          NotificationCenter.default.post(name: .MTBiometricAuthenicationNotificationLoginStatus, object: self, userInfo: userInfo)
+          NotificationCenter.default.post(name: .MTBiometricAuthenticationNotificationLoginStatus, object: self, userInfo: userInfo)
     }
     
     

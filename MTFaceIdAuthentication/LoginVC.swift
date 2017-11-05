@@ -14,7 +14,7 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(LoginVC.authenticationCompletionHandler(loginStatusNotification:)), name: .MTBiometricAuthenicationNotificationLoginStatus, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginVC.authenticationCompletionHandler(loginStatusNotification:)), name: .MTBiometricAuthenticationNotificationLoginStatus, object: nil)
     }
     
     
@@ -43,8 +43,8 @@ class LoginVC: UIViewController {
     
     
     @objc func authenticationCompletionHandler(loginStatusNotification: Notification) {
-        if let _ = loginStatusNotification.object as? MTBiometricAuthenication, let userInfo = loginStatusNotification.userInfo {
-            if let authStatus = userInfo[MTBiometricAuthenication.status] as? MTBiomericAuthenticationStatus {
+        if let _ = loginStatusNotification.object as? MTBiometricAuthentication, let userInfo = loginStatusNotification.userInfo {
+            if let authStatus = userInfo[MTBiometricAuthentication.status] as? MTBiomericAuthenticationStatus {
                 if authStatus.success {
                     print("Login Success")
                     DispatchQueue.main.async {
@@ -76,7 +76,7 @@ class LoginVC: UIViewController {
     }
 
     func authenticateWithBiometric() {
-        let bioAuth = MTBiometricAuthenication()
+        let bioAuth = MTBiometricAuthentication()
         bioAuth.reasonString = "To login into the app"
         bioAuth.authenticationWithBiometricID()
     }
