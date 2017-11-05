@@ -6,7 +6,7 @@ This Code also works for touchId authentication.
 
 Detailed explanation of the code will be added soon in https://www.machinethinks.com
 
-class MTBiometricAuthenication in this project is responsible for biometeric authentication and notify the success / fail status with 
+Class MTBiometricAuthenication in this project is responsible for biometeric authentication and notify the success / fail status with 
 Post Notification
 
 How to use MTBiometricAuthenication class.
@@ -18,31 +18,12 @@ How to use MTBiometricAuthenication class.
   NotificationCenter.default.addObserver(self, selector: #selector(LoginVC.authenticationCompletionHandler(loginStatusNotification:)),
     name: .MTBiometricAuthenicationNotificationLoginStatus, object: nil)
   
-4) Implement the authenticationCompletionHandler as below.
-<code>
- @objc func authenticationCompletionHandler(loginStatusNotification: Notification) {
-        if let _ = loginStatusNotification.object as? MTBiometricAuthenication, let userInfo = loginStatusNotification.userInfo {
-            if let authStatus = userInfo[MTBiometricAuthenication.status] as? MTBiomericAuthenticationStatus {
-                if authStatus.success {
-                    print("Login Success")
-                    DispatchQueue.main.async {
-                        self.onLoginSuccess()
-                    }
-                } else {
-                    if let errorCode = authStatus.errorCode {
-                        print("Login Fail with code \(String(describing: errorCode)) reason \(authStatus.errorMessage)")
-                        DispatchQueue.main.async {
-                            self.onLoginFail()
-                            }
-                    
-                    }
-                }
-            }
-        }
-    }
-    </code>
-    
-    Output Screenshot from this project:
+4) authStatus = userInfo[MTBiometricAuthenication.status] as? MTBiomericAuthenticationStatus holds the response object.
+  a) check if authStatus.success is true for successfull authentication
+  b) if authStatus.success is false, check for authStatus.errorMessage for error message and  authStatus.errorCode for LAError code.
+  Currently all the possible error codes are mapped to error message in the response.
+ 
+Output Screenshot from this project:
     
     ![alt text](https://github.com/sriscode/FaceId-Authentication-IphoneX/blob/master/FaceIDAuthenticating.PNG)
     
