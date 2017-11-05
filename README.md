@@ -1,18 +1,19 @@
 # FaceId-Authentication-IphoneX
 Face Id Authentication integration into the app
 
-The code here demonstrates how to integrate Face Id authentication integration into the app. Face Id is currently supported on iPhone X.
-Thia Code also works for touchId authenticaiton.
+The code demonstrates how to integrate Face Id authentication integration into the app. Face Id is currently supported on iPhone X.
+This Code also works for touchId authentication.
 
 Detailed explanation of the code will be added soon in https://www.machinethinks.com
 
-clas MTBiometricAuthenication in this respository is responsible for biometeric authentication and notify the success / fail status with 
+class MTBiometricAuthenication in this project is responsible for biometeric authentication and notify the success / fail status with 
 Post Notification
 
-How to use MTBiometricAuthenication class
+How to use MTBiometricAuthenication class.
+
 1) Create an instance of MTBiometricAuthenication class
-2) call authenticationWithBiometricID to initiate the authentication process
-3) add notification observerers as below
+2) Call authenticationWithBiometricID to initiate the authentication process
+3) Add notification observerers as below
 
   NotificationCenter.default.addObserver(self, selector: #selector(LoginVC.authenticationCompletionHandler(loginStatusNotification:)),
     name: .MTBiometricAuthenicationNotificationLoginStatus, object: nil)
