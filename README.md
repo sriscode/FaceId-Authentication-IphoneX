@@ -25,5 +25,5 @@ How to use MTBiometricAuthenication class.
  
 Output Screenshot from this project:
     
-    ![alt text](https://github.com/sriscode/FaceId-Authentication-IphoneX/blob/master/FaceIDAuthenticating.PNG)
+![alt text](https://github.com/sriscode/FaceId-Authentication-IphoneX/blob/master/FaceIDAuthenticating.PNG)
     
